@@ -753,7 +753,7 @@ const Auction = () => {
                                         )}
                                         {selectLabel.value === "round_performance" && (
                                             <div className=" d-flex justify-content-between pt-3 w-100 flex-wrap">
-                                                <div className="d-flex select-chart-btn gap-1" style={{zIndex:'99'}}>
+                                                <div className="d-flex select-chart-btn gap-1" style={{zIndex:'1'}}>
                                                     <div className="col-4">
                                                         <button
                                                             className={`btn-small ${
@@ -844,9 +844,9 @@ const Auction = () => {
                                     )}
                                 {
                                     selectLabel.value !== "round_chance" && 
-                                    !round_perform1.loading &&
-                                    !round_perform2.loading &&
-                                    !bid_perform.loading && (
+                                    !round_perform1.error &&
+                                    !round_perform2.error &&
+                                    !bid_perform.error && (
                                     <div
                                         className="btnGroup "
                                         role="group"
